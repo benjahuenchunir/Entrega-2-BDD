@@ -168,7 +168,10 @@ def get_historial_peliculas(df: pd.DataFrame):
     historial_peliculas.sort_values(
         by=[Columns.ID_USUARIO.value, Columns.ID_PELICULA.value], inplace=True
     )
-    historial_peliculas.to_csv(PathsClean.PATH_HISTORIAL_PELICULAS.value, index=False)
+    historial_peliculas.reset_index(drop=True, inplace=True)
+    historial_peliculas.index += 1
+    historial_peliculas.index.name = Columns.ID.value
+    historial_peliculas.to_csv(PathsClean.PATH_HISTORIAL_PELICULAS.value, index=True)
 
 
 def get_historial_series(df: pd.DataFrame):
@@ -185,7 +188,10 @@ def get_historial_series(df: pd.DataFrame):
     historial_series.sort_values(
         by=[Columns.ID_USUARIO.value, Columns.ID_CAPITULO.value], inplace=True
     )
-    historial_series.to_csv(PathsClean.PATH_HISTORIAL_SERIES.value, index=False)
+    historial_series.reset_index(drop=True, inplace=True)
+    historial_series.index += 1
+    historial_series.index.name = Columns.ID.value
+    historial_series.to_csv(PathsClean.PATH_HISTORIAL_SERIES.value, index=True)
 
 
 def get_pagos(df: pd.DataFrame):
@@ -355,3 +361,4 @@ if __name__ == "__main__":
     # revisar subscripciones
     # revisar tabla genero_subgenero    
     # TODO en tabla arriendos se debe elimianr monto o id_proovedor seugn respuesta issue
+    # id de pagos quizas no es necesaria
