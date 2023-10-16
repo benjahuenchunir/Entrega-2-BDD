@@ -214,6 +214,7 @@ def get_arriendos_peliculas(df: pd.DataFrame):
     pagos = df.dropna(subset=[Columns.PID.value])[
         [
             Columns.PAGO_ID.value,
+            Columns.UID.value,
             Columns.PRO_ID.value,
             Columns.PID.value,
             Columns.FECHA.value,
@@ -223,13 +224,14 @@ def get_arriendos_peliculas(df: pd.DataFrame):
     pagos.rename(
         columns={
             Columns.PAGO_ID.value: Columns.ID.value,
+            Columns.UID.value: Columns.ID_USUARIO.value,
             Columns.PRO_ID.value: Columns.ID_PROOVEDOR.value,
             Columns.PID.value: Columns.ID_PELICULA.value,
         },
         inplace=True,
     )
     pagos.sort_values(
-        by=[Columns.ID.value, Columns.ID_PROOVEDOR.value, Columns.ID_PELICULA.value],
+        by=[Columns.ID.value, Columns.ID_USUARIO.value, Columns.ID_PROOVEDOR.value, Columns.ID_PELICULA.value],
         inplace=True,
     )
     pagos.to_csv(PathsClean.PATH_ARRIENDOS_PELICULAS.value, index=False)
@@ -351,4 +353,5 @@ if __name__ == "__main__":
     print("Done!")
     # TODO revisar tabla de peliculas (nulos)
     # revisar subscripciones
-    # revisar tabla genero_subgenero
+    # revisar tabla genero_subgenero    
+    # TODO en tabla arriendos se debe elimianr monto o id_proovedor seugn respuesta issue
