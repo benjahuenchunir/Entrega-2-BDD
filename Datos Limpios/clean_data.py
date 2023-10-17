@@ -247,10 +247,10 @@ def get_generos(df: pd.DataFrame):
     generos = df[Columns.GENERO.value].copy()
     generos = generos.drop_duplicates()
     generos = generos.sort_values()
-    generos_full = pd.concat([generos], ignore_index=True)
-    generos_full.index += 1
-    generos_full.index.name = Columns.ID.value
-    generos_full.to_csv(PathsClean.PATH_GENEROS.value, index=True)
+    generos.reset_index(drop=True, inplace=True)
+    generos.index += 1
+    generos.index.name = Columns.ID.value
+    generos.to_csv(PathsClean.PATH_GENEROS.value, index=True)
 
 
 def get_subgeneros(df: pd.DataFrame):

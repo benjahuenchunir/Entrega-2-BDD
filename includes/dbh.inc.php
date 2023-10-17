@@ -1,6 +1,6 @@
 <?php
 
-$dsn = "mysql:host=localhost;dbname=meta_streaming_service";
+$dsn = "mysql:host=localhost;dbname=meta_streaming_service_v2";
 $username = "root";
 $password = "";
 

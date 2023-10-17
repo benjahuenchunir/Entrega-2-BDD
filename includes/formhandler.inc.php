@@ -1,16 +1,34 @@
 <?php
+
+use function PHPSTORM_META\type;
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $queryIndex = $_POST["queryIndex"];
-    $userInput = $_POST["userInput"];
-    $userSelection = $_POST["userSelection"];
+    if (isset($_POST["userInput"])) {
+        $userInput = $_POST["userInput"];
+    } else {
+        $userInput = null;
+    }
+    if (isset($_POST["userSelection"])) {
+        $userSelection = $_POST["userSelection"];
+    } else {
+        $userSelection = null;
+    }
     
     switch ($queryIndex) {
         case 0:
-            $query = "SELECT * FROM usuarios;";
-            $tableHeaders = array("id", "nombre", "contraseña", "email");
+            $query = "SELECT peliculas.titulo AS pelicula, proovedores.nombre AS proovedor FROM peliculas
+            INNER JOIN proovedores_peliculas ON peliculas.id = proovedores_peliculas.id_pelicula
+            INNER JOIN proovedores ON proovedores_peliculas.id_proovedor = proovedores.id
+            WHERE proovedores_peliculas.precio IS NULL;";
+            $tableHeaders = array("pelicula", "proovedor");
             break;
         case 1:
-            $query = "SELECT * FROM serie WHERE serie.temporadas >= $userInput";
+            $query = "SELECT series.titulo AS Serie FROM series
+            INNER JOIN capitulos ON series.id = capitulos.id_serie
+            GROUP BY series.id, series.titulo
+            HAVING COUNT(DISTINCT capitulos.numero_temporada) >= :userInput;";
+            $tableHeaders = array("Serie");
             break;
         case 2:
             $query = "SELECT * FROM pelicula JOIN proveedor ON pelicula.id_pelicula = proveedor.id_pelicula WHERE pelicula.titulo = $userInput";
@@ -35,8 +53,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     try {
         require_once "dbh.inc.php";
         $stmt = $pdo->prepare($query);
-        //$stmt->bindParam(':userInput', $userInput);
-        //$stmt->bindParam(':userSelection', $userSelection);
+        print_r($userInput);
+        print_r($userSelection);
+        print_r(!is_null($userInput));
+        if (!is_null($userInput)) {
+            $stmt->bindValue(':userInput', $userInput);
+        }
+        if (is_null($userSelection)) {
+            $stmt->bindValue(':userSelection', $userSelection);
+        }
         $stmt->execute();
         if ($stmt->rowCount() > 0) {
             echo "<table class='table'>

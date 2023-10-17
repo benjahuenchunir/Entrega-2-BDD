@@ -30,11 +30,7 @@
             <input type="text" id="inputField" name="userInput" style="display: none" placeholder="Ingrese un valor" class="form-control">
 
             <!-- Second Dropdown (initially hidden) -->
-            <select id="secondDropdown" style="display: none" name="userSelection" class="form-control">
-                <option value="suboption1">Suboption 1</option>
-                <option value="suboption2">Suboption 2</option>
-                <option value="suboption3">Suboption 3</option>
-            </select>
+            <select id="secondDropdown" style="display: none" name="userSelection" class="form-control"></select>
 
             <br>
 
@@ -48,6 +44,25 @@
 
     <script>
         $(document).ready(function() {
+            // Populate Genders Dropdown
+            $(document).ready(function() {
+                $.ajax({
+                    url: '/includes/get_genders.php',
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function(response) {
+                        var dropdown = $('#secondDropdown');
+                        dropdown.empty();
+                        $.each(response, function(key, entry) {
+                            dropdown.append($('<option></option>').attr('value', entry.id).text(entry.nombre));
+                        });
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error fetching gender data:', error);
+                    },
+                });
+            });
+            // Run query on form submit
             $('#data-form').submit(function(e) {
                 e.preventDefault();
 
