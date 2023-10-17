@@ -11,13 +11,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         SELECT series.titulo AS Titulo, proovedores.nombre AS Proovedor FROM series
         INNER JOIN proovedores_series ON series.id = proovedores_series.id_serie
         INNER JOIN proovedores ON proovedores_series.id_proovedor = proovedores.id
-    ) AS U WHERE Titulo LIKE :userInput;";
+    ) AS U WHERE UPPER(Titulo) = UPPER(:userInput);";
     $tableHeaders = array("Titulo", "Proovedor");
 
     try {
         require_once "../includes/dbh.inc.php";
         $stmt = $pdo->prepare($query);
-        $stmt->bindValue(':userInput', '%'.$userInput.'%', PDO::PARAM_STR);
+        $stmt->bindValue(':userInput', $userInput, PDO::PARAM_STR);
         $stmt->execute();
         require_once "../includes/table_builder.php";
         $pdo = null;

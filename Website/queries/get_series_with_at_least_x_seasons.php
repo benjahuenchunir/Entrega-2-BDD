@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     try {
         require_once "../includes/dbh.inc.php";
         $stmt = $pdo->prepare($query);
-        $stmt->bindValue(':userInput', $userInput);
+        $stmt->bindValue(':userInput', $userInput, PDO::PARAM_INT);
         $stmt->execute();
         require_once "../includes/table_builder.php";
         $pdo = null;
