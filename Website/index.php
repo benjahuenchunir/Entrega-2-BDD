@@ -69,6 +69,7 @@
                 var queryIndex = $('#queryDropdown').val();
                 var userInput = $('#inputField').val();
                 var userSelection = $('#secondDropdown').val();
+                console.log(queryIndex, userInput, userSelection);
                 var url = '';
                 switch (queryIndex) {
                     case '0':
@@ -81,6 +82,7 @@
                         url = '/queries/get_movies_and_series_with_x_title.php';
                         break;
                     case '3':
+                        url = '/queries/get_movies_that_belong_to_gender_or_subgender.php'
                         break;
                     case '4':
                         break;
