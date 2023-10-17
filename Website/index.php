@@ -89,6 +89,7 @@
                     case '5':
                         break;
                     case '6':
+                        url = '/queries/get_users_and_money_spent_on_movies.php';
                         break;
                     default:
                         console.error('Invalid query index.');
