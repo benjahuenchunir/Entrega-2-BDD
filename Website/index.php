@@ -82,11 +82,12 @@
                         url = '/queries/get_movies_and_series_with_x_title.php';
                         break;
                     case '3':
-                        url = '/queries/get_movies_that_belong_to_gender_or_subgender.php'
+                        url = '/queries/get_movies_that_belong_to_gender_or_subgender.php';
                         break;
                     case '4':
                         break;
                     case '5':
+                        url = '/queries/get_series_user_x_saw_more_than_one_chapter.php';
                         break;
                     case '6':
                         url = '/queries/get_users_and_money_spent_on_movies.php';
