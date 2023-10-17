@@ -69,10 +69,33 @@
                 var queryIndex = $('#queryDropdown').val();
                 var userInput = $('#inputField').val();
                 var userSelection = $('#secondDropdown').val();
+                var url = '';
+                switch (queryIndex) {
+                    case '0':
+                        url = '/queries/get_free_movies_and_providers.php';
+                        break;
+                    case '1':
+                        url = '/queries/get_series_with_at_least_x_seasons.php';
+                        break;
+                    case '2':
+                        url = '/queries/get_movies_and_series_with_x_title.php';
+                        break;
+                    case '3':
+                        break;
+                    case '4':
+                        break;
+                    case '5':
+                        break;
+                    case '6':
+                        break;
+                    default:
+                        console.error('Invalid query index.');
+                        break;
+                }
 
                 $.ajax({
                     type: 'POST',
-                    url: '/includes/formhandler.inc.php',
+                    url: url,
                     data: {
                         queryIndex: queryIndex,
                         userInput: userInput,
