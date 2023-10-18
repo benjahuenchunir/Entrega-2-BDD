@@ -77,7 +77,7 @@ function sortTable(column, order) {
 }
 
 function updateSortButtons(column, order) {
-    $('.sort-btn').html('▲');
-    const $button = $(`.sort-btn[id="${column}"]`);
+    $('.btn-secondary').html('▲');
+    const $button = $(`.btn-secondary[id="${column}"]`);
     $button.html(order === 'asc' ? '▲' : '▼');
 }

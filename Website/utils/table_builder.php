@@ -7,7 +7,7 @@ if ($stmt->rowCount() > 0) {
                 <thead>
                     <tr>";
             foreach ($tableHeaders as $header) {
-                echo "<th>$header <button class='sort-btn' id=$header onclick='onSortButtonClicked(this.id)'>▲</button></th>";
+                echo "<th>$header <button class='btn btn-secondary btn-sm' id=$header onclick='onSortButtonClicked(this.id)'>▲</button></th>";
             }
             echo "</tr>
                 </thead>
@@ -23,5 +23,5 @@ if ($stmt->rowCount() > 0) {
     
             echo "</tbody></table>";
         } else {
-            echo "No data found.";
+            echo "No se encontraro resultados";
         }

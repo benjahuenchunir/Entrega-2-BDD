@@ -12,6 +12,8 @@
 <body>
     <h1>Query Builder</h1>
     <div class="container mt-5">
+        
+        <img src="imgs/popcorn.png" width="300" height="300">
         <form id="data-form">
             <label for="queryDropdown">Seleccione una consulta:</label>
             <select id="queryDropdown" onchange="toggleInputOrDropdown()" name="queryIndex" class="form-control">
@@ -45,7 +47,7 @@
         $(document).ready(function() {
             // Populate Genders Dropdown
             $.ajax({
-                url: '/includes/get_genders.php',
+                url: '/utils/get_genders.php',
                 method: 'GET',
                 dataType: 'json',
                 success: function(response) {

@@ -14,11 +14,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $tableHeaders = array("Titulo", "Proovedor");
 
     try {
-        require_once "../includes/dbh.inc.php";
+        require_once "../utils/dbh.inc.php";
         $stmt = $pdo->prepare($query);
         $stmt->bindValue(':userInput', $userInput, PDO::PARAM_STR);
         $stmt->execute();
-        require_once "../includes/table_builder.php";
+        require_once "../utils/table_builder.php";
         $pdo = null;
         $stmt = null;
     } catch (PDOException $e) {
