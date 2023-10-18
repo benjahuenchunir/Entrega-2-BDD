@@ -40,7 +40,7 @@
 
     <br>
 
-    <div id="result-table"></div>
+    <div id="result-table" class="container mt-5"></div>
 
     <script>
         $(document).ready(function() {
@@ -52,7 +52,6 @@
                     dataType: 'json',
                     success: function(response) {
                         var dropdown = $('#secondDropdown');
-                        dropdown.empty();
                         $.each(response, function(key, entry) {
                             dropdown.append($('<option></option>').attr('value', entry.id).text(entry.nombre));
                         });
@@ -65,11 +64,9 @@
             // Run query on form submit
             $('#data-form').submit(function(e) {
                 e.preventDefault();
-
                 var queryIndex = $('#queryDropdown').val();
                 var userInput = $('#inputField').val();
                 var userSelection = $('#secondDropdown').val();
-                console.log(queryIndex, userInput, userSelection);
                 var url = '';
                 switch (queryIndex) {
                     case '0':

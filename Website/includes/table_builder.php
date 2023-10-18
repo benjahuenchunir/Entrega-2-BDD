@@ -1,4 +1,7 @@
 <?php
+$rowCount = $stmt->rowCount();
+echo "Cantidad de resultados: $rowCount<br>";
+ 
 if ($stmt->rowCount() > 0) {
             echo "<table class='table'>
                 <thead>
