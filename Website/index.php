@@ -60,7 +60,6 @@
             });
             // Run query on form submit
             $('#data-form').submit(function(e) {
-                console.log('Form submitted.');
                 e.preventDefault();
                 var queryIndex = $('#queryDropdown').val();
                 var userInput = $('#inputField').val();
@@ -91,6 +90,7 @@
                         url = '/queries/get_movies_that_belong_to_gender_or_subgender.php';
                         break;
                     case '4':
+                        url = '/queries/get_all_movies_user_x_has_access_to.php';
                         break;
                     case '5':
                         url = '/queries/get_series_user_x_saw_more_than_one_chapter.php';
@@ -107,7 +107,6 @@
                     type: 'POST',
                     url: url,
                     data: {
-                        queryIndex: queryIndex,
                         userInput: userInput,
                         userSelection: userSelection
                     },

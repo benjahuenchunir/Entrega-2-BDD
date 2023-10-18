@@ -1,7 +1,6 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $queryIndex = $_POST["queryIndex"];
     $userInput = $_POST["userInput"];
     $query = "SELECT series.titulo AS Serie FROM series
     INNER JOIN capitulos ON series.id = capitulos.id_serie

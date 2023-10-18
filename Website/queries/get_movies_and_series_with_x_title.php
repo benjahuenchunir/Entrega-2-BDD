@@ -1,7 +1,6 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $queryIndex = $_POST["queryIndex"];
     $userInput = $_POST["userInput"];
     $query = "SELECT * FROM (
         SELECT peliculas.titulo AS Titulo, proovedores.nombre AS Proovedor FROM peliculas

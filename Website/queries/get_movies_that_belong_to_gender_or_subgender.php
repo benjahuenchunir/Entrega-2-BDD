@@ -1,7 +1,6 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $queryIndex = $_POST["queryIndex"];
     $userSelection = $_POST["userSelection"];
     $query = "SELECT DISTINCT titulo AS Titulo FROM peliculas
     INNER JOIN generos_peliculas ON peliculas.id = generos_peliculas.id_pelicula
