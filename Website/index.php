@@ -28,6 +28,7 @@
 
             <!-- Input Field (initially hidden) -->
             <input type="text" id="inputField" name="userInput" style="display: none" placeholder="Ingrese un valor" class="form-control">
+            <span id="error-message" style="color: red; display: none;"></span>
 
             <!-- Second Dropdown (initially hidden) -->
             <select id="secondDropdown" style="display: none" name="userSelection" class="form-control"></select>
@@ -67,12 +68,23 @@
                 var queryIndex = $('#queryDropdown').val();
                 var userInput = $('#inputField').val();
                 var userSelection = $('#secondDropdown').val();
+                const errorMessage = document.getElementById("error-message");
+                errorMessage.style.display = "none";
                 var url = '';
                 switch (queryIndex) {
                     case '0':
                         url = '/queries/get_free_movies_and_providers.php';
                         break;
                     case '1':
+                        if (userInput === '') {
+                            errorMessage.style.display = "block";
+                            errorMessage.innerHTML = "Por favor ingrese un valor";
+                            return;
+                        } else if (isNaN(userInput)) {
+                            errorMessage.style.display = "block";
+                            errorMessage.innerHTML = "Por favor ingrese un número";
+                            return;
+                        }
                         url = '/queries/get_series_with_at_least_x_seasons.php';
                         break;
                     case '2':

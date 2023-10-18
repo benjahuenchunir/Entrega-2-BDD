@@ -20,12 +20,16 @@ function toggleInputOrDropdown() {
     var inputField = document.getElementById("inputField");
     var secondDropdown = document.getElementById("secondDropdown");
     var spacer = document.getElementById("parameterSpace");
+    var errorMessage = document.getElementById("error-message");
+    var table = document.getElementById("result-table");
 
     // Hide all fields by default
     spacer.style.display = "none";
     inputField.style.display = "none";
     inputField.value = "";
     secondDropdown.style.display = "none";
+    errorMessage.style.display = "none";
+    table.innerHTML = "";
 
     // Show the appropriate field based on the selected option
     let queryType = getQueryType(dropdown.selectedIndex)
