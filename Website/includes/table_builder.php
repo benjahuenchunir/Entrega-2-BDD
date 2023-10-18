@@ -3,11 +3,11 @@ $rowCount = $stmt->rowCount();
 echo "Cantidad de resultados: $rowCount<br>";
  
 if ($stmt->rowCount() > 0) {
-            echo "<table class='table'>
+            echo "<table class='table' id='result-table'>
                 <thead>
                     <tr>";
             foreach ($tableHeaders as $header) {
-                echo "<th>$header</th>";
+                echo "<th>$header <button class='sort-btn' id=$header onclick='onSortButtonClicked(this.id)'>▲</button></th>";
             }
             echo "</tr>
                 </thead>
@@ -16,7 +16,7 @@ if ($stmt->rowCount() > 0) {
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 echo "<tr>";
                 foreach ($tableHeaders as $header) {
-                    echo "<td>" . $row[$header] . "</td>";
+                    echo "<td class='$header'>" . $row[$header] . "</td>";
                 }
                 echo "</tr>";
             }

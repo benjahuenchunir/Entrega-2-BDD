@@ -26,11 +26,9 @@
 
             <br id="parameterSpace" style="display: none">
 
-            <!-- Input Field (initially hidden) -->
             <input type="text" id="inputField" name="userInput" style="display: none" placeholder="Ingrese un valor" class="form-control">
             <span id="error-message" style="color: red; display: none;"></span>
 
-            <!-- Second Dropdown (initially hidden) -->
             <select id="secondDropdown" style="display: none" name="userSelection" class="form-control"></select>
 
             <br>
@@ -41,29 +39,28 @@
 
     <br>
 
-    <div id="result-table" class="container mt-5"></div>
+    <div id="result-div" class="container mt-5"></div>
 
     <script>
         $(document).ready(function() {
             // Populate Genders Dropdown
-            $(document).ready(function() {
-                $.ajax({
-                    url: '/includes/get_genders.php',
-                    method: 'GET',
-                    dataType: 'json',
-                    success: function(response) {
-                        var dropdown = $('#secondDropdown');
-                        $.each(response, function(key, entry) {
-                            dropdown.append($('<option></option>').attr('value', entry.id).text(entry.nombre));
-                        });
-                    },
-                    error: function(xhr, status, error) {
-                        console.error('Error fetching gender data:', error);
-                    },
-                });
+            $.ajax({
+                url: '/includes/get_genders.php',
+                method: 'GET',
+                dataType: 'json',
+                success: function(response) {
+                    var dropdown = $('#secondDropdown');
+                    $.each(response, function(key, entry) {
+                        dropdown.append($('<option></option>').attr('value', entry.id).text(entry.nombre));
+                    });
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error fetching gender data:', error);
+                },
             });
             // Run query on form submit
             $('#data-form').submit(function(e) {
+                console.log('Form submitted.');
                 e.preventDefault();
                 var queryIndex = $('#queryDropdown').val();
                 var userInput = $('#inputField').val();
@@ -115,7 +112,7 @@
                         userSelection: userSelection
                     },
                     success: function(data) {
-                        $('#result-table').html(data);
+                        $('#result-div').html(data);
                     }
                 });
             });

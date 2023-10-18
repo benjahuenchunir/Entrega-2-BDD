@@ -1,9 +1,10 @@
+let sortOrder = 'asc';
+
 const QueryType = {
     INPUT: "input",
     DROPDOWN: "dropdown",
     NONE: "none"
 }
-// TODO quizas mejor guardar los dropdowns como globales
 
 function getQueryType(index) {
     if ([0, 6].includes(index)) {
@@ -21,9 +22,8 @@ function toggleInputOrDropdown() {
     var secondDropdown = document.getElementById("secondDropdown");
     var spacer = document.getElementById("parameterSpace");
     var errorMessage = document.getElementById("error-message");
-    var table = document.getElementById("result-table");
+    var table = document.getElementById("result-div");
 
-    // Hide all fields by default
     spacer.style.display = "none";
     inputField.style.display = "none";
     inputField.value = "";
@@ -31,7 +31,6 @@ function toggleInputOrDropdown() {
     errorMessage.style.display = "none";
     table.innerHTML = "";
 
-    // Show the appropriate field based on the selected option
     let queryType = getQueryType(dropdown.selectedIndex)
     switch (queryType) {
         case QueryType.INPUT:
@@ -45,45 +44,40 @@ function toggleInputOrDropdown() {
     }
 }
 
-function runQuery() {
-    event.preventDefault();
-    let dropdown = document.getElementById("queryDropdown");
-    let queryType = getQueryType(dropdown.selectedIndex);
-    switch (queryType) {
-        case QueryType.INPUT:
-            let inputField = document.getElementById("inputField");
-            if (inputField.value == "") {
-                alert("El campo no puede estar vacio");
-                return;
-            }
-            break;
-        case QueryType.DROPDOWN:
-            let secondDropdown = document.getElementById("secondDropdown");
-            if (secondDropdown.selectedIndex == 0) {
-                alert("Debe seleccionar una opcion");
-                return;
-            }
-            break;
-            // TODO quizas esto no es necesario
-    }
-    console.log("Running query: " + dropdown.selectedIndex);
-    
-    fetch('/includes/formhandler.inc.php', {
-            method: 'POST',
-            body: JSON.stringify({
-                queryIndex: dropdown.selectedIndex,
-                userInput: inputField.value,
-                userSelection: secondDropdown[secondDropdown.selectedIndex].value
-            }),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+function onSortButtonClicked(clicked_id) {
+    sortOrder = toggleSortOrder(sortOrder);
+    sortTable(clicked_id, sortOrder);
+    updateSortButtons(clicked_id, sortOrder);
+};
+
+function toggleSortOrder(currentOrder) {
+    return currentOrder === 'asc' ? 'desc' : 'asc';
+}
+
+function sortTable(column, order) {
+    const $table = $('#result-table');
+    const $tbody = $table.find('tbody');
+    const $rows = $tbody.find('tr').toArray();
+
+    $rows.sort(function (a, b) {
+        var aValue = $(a).find('td.' + column).text();
+        var bValue = $(b).find('td.' + column).text();
+
+        if (order === 'asc') {
+            return aValue.localeCompare(bValue, undefined, { numeric: true });
+        } else {
+            return bValue.localeCompare(aValue, undefined, { numeric: true });
+        }
+    });
+
+    $tbody.empty();
+    $rows.forEach(function (row) {
+        $tbody.append(row);
+    });
+}
+
+function updateSortButtons(column, order) {
+    $('.sort-btn').html('▲');
+    const $button = $(`.sort-btn[id="${column}"]`);
+    $button.html(order === 'asc' ? '▲' : '▼');
 }
