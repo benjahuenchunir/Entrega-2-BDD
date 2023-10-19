@@ -1,7 +1,7 @@
 <?php
 
 try {
-    require_once "dbh.inc.php";
+    require_once "../config/dbh.inc.php";
     $query = "SELECT * FROM generos;";
     $stmt = $pdo->prepare($query);
     $stmt->execute();
