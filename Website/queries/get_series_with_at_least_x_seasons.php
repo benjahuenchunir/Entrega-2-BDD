@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $tableHeaders = array("Serie");
 
     try {
-        require_once "../utils/dbh.inc.php";
+        require_once "../config/dbh.inc.php";
         $stmt = $pdo->prepare($query);
         $stmt->bindValue(':userInput', $userInput, PDO::PARAM_INT);
         $stmt->execute();

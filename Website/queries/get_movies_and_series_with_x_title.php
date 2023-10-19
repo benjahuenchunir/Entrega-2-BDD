@@ -3,18 +3,18 @@
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $userInput = $_POST["userInput"];
     $query = "SELECT * FROM (
-        SELECT peliculas.titulo AS Titulo, proovedores.nombre AS Proovedor FROM peliculas
-        INNER JOIN proovedores_peliculas ON peliculas.id = proovedores_peliculas.id_pelicula
-        INNER JOIN proovedores ON proovedores_peliculas.id_proovedor = proovedores.id
+        SELECT peliculas.titulo AS titulo, proveedores.nombre AS proveedor FROM peliculas
+        INNER JOIN proveedores_peliculas ON peliculas.id = proveedores_peliculas.id_pelicula
+        INNER JOIN proveedores ON proveedores_peliculas.id_proveedor = proveedores.id
         UNION
-        SELECT series.titulo AS Titulo, proovedores.nombre AS Proovedor FROM series
-        INNER JOIN proovedores_series ON series.id = proovedores_series.id_serie
-        INNER JOIN proovedores ON proovedores_series.id_proovedor = proovedores.id
+        SELECT series.titulo AS Titulo, proveedores.nombre AS Proveedor FROM series
+        INNER JOIN proveedores_series ON series.id = proveedores_series.id_serie
+        INNER JOIN proveedores ON proveedores_series.id_proveedor = proveedores.id
     ) AS U WHERE UPPER(Titulo) = UPPER(:userInput);";
-    $tableHeaders = array("Titulo", "Proovedor");
+    $tableHeaders = array("titulo", "proovedor");
 
     try {
-        require_once "../utils/dbh.inc.php";
+        require_once "../config/dbh.inc.php";
         $stmt = $pdo->prepare($query);
         $stmt->bindValue(':userInput', $userInput, PDO::PARAM_STR);
         $stmt->execute();

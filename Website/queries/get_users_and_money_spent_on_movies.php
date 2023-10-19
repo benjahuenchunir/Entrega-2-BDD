@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $tableHeaders = array("Usuario", "Total");
 
     try {
-        require_once "../utils/dbh.inc.php";
+        require_once "../config/dbh.inc.php";
         $stmt = $pdo->prepare($query);
         $stmt->execute();
         require_once "../utils/table_builder.php";

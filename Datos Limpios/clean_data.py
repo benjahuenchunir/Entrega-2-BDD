@@ -6,7 +6,7 @@ def get_proovedores(df: pd.DataFrame):
     df = df[[Columns.ID.value, Columns.NOMBRE.value, Columns.COSTO.value]]
     df = df.drop_duplicates()
     df = df.sort_values(by=Columns.ID.value)
-    df.to_csv(PathsClean.PATH_PROOVEDORES.value, index=False)
+    df.to_csv(PathsClean.PATH_PROVEEDORES.value, index=False)
 
 
 def get_peliculas(df: pd.DataFrame):
@@ -15,12 +15,13 @@ def get_peliculas(df: pd.DataFrame):
             Columns.PID.value,
             Columns.TITULO.value,
             Columns.DURACION.value,
-            Columns.CLASIFICACION.value,
             Columns.PUNTUACION.value,
+            Columns.CLASIFICACION.value,
             Columns.AÑO.value,
         ]
     ]
     peliculas.rename(columns={Columns.PID.value: Columns.ID.value}, inplace=True)
+    peliculas[Columns.ID.value] = peliculas[Columns.ID.value].astype(int)
     peliculas.drop_duplicates(subset=[Columns.ID.value], inplace=True)
     peliculas.sort_values(by=Columns.ID.value, inplace=True)
     peliculas.to_csv(PathsClean.PATH_PELICULAS.value, index=False)
@@ -129,11 +130,14 @@ def get_proovedores_peliculas(df: pd.DataFrame):
         },
         inplace=True,
     )
+    proovedores_peliculas[Columns.ID_PELICULA.value] = proovedores_peliculas[Columns.ID_PELICULA.value].astype(int)
+    proovedores_peliculas[Columns.PRECIO.value] = proovedores_peliculas[Columns.PRECIO.value].astype('Int64')
+    proovedores_peliculas[Columns.DISPONIBILIDAD.value] = proovedores_peliculas[Columns.DISPONIBILIDAD.value].astype('Int64')
     proovedores_peliculas.sort_values(
         by=[Columns.ID_PROOVEDOR.value, Columns.ID_PELICULA.value], inplace=True
     )
     proovedores_peliculas.to_csv(
-        PathsClean.PATH_PELICULAS_PROOVEDORES.value, index=False
+        PathsClean.PATH_PELICULAS_PROVEEDORES.value, index=False
     )
 
 
@@ -151,7 +155,7 @@ def get_proovedores_series(df: pd.DataFrame):
     proovedores_series.sort_values(
         by=[Columns.ID_PROOVEDOR.value, Columns.ID_SERIE.value], inplace=True
     )
-    proovedores_series.to_csv(PathsClean.PATH_SERIES_PROOVEDORES.value, index=False)
+    proovedores_series.to_csv(PathsClean.PATH_SERIES_PROVEEDORES.value, index=False)
 
 
 def get_historial_peliculas(df: pd.DataFrame):
@@ -237,7 +241,12 @@ def get_arriendos_peliculas(df: pd.DataFrame):
         inplace=True,
     )
     pagos.sort_values(
-        by=[Columns.ID.value, Columns.ID_USUARIO.value, Columns.ID_PROOVEDOR.value, Columns.ID_PELICULA.value],
+        by=[
+            Columns.ID.value,
+            Columns.ID_USUARIO.value,
+            Columns.ID_PROOVEDOR.value,
+            Columns.ID_PELICULA.value,
+        ],
         inplace=True,
     )
     pagos.to_csv(PathsClean.PATH_ARRIENDOS_PELICULAS.value, index=False)
@@ -281,7 +290,7 @@ def get_subgeneros(df: pd.DataFrame):
 
 
 def clean_proovedores():
-    df = pd.read_csv(Paths.PATH_PROOVEDORES.value, sep=SEPARADOR, encoding="utf-8")
+    df = pd.read_csv(Paths.PATH_PROVEEDORES.value, sep=SEPARADOR, encoding="utf-8")
     get_proovedores(df)
     get_proovedores_peliculas(df)
     get_proovedores_series(df)
@@ -359,6 +368,6 @@ if __name__ == "__main__":
     print("Done!")
     # TODO revisar tabla de peliculas (nulos)
     # revisar subscripciones
-    # revisar tabla genero_subgenero    
+    # revisar tabla genero_subgenero
     # TODO en tabla arriendos se debe elimianr monto o id_proovedor seugn respuesta issue
     # id de pagos quizas no es necesaria

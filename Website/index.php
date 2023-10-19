@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>PHP/PostgreSQL Query Builder</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="/scripts.js"></script>
+    <script src="scripts/scripts.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 
@@ -45,9 +45,10 @@
 
     <script>
         $(document).ready(function() {
+            console.log('Document ready.');
             // Populate Genders Dropdown
             $.ajax({
-                url: '/utils/get_genders.php',
+                url: 'utils/get_genders.php',
                 method: 'GET',
                 dataType: 'json',
                 success: function(response) {
@@ -71,7 +72,7 @@
                 var url = '';
                 switch (queryIndex) {
                     case '0':
-                        url = '/queries/get_free_movies_and_providers.php';
+                        url = 'queries/get_free_movies_and_providers.php';
                         break;
                     case '1':
                         if (userInput === '') {
@@ -83,22 +84,22 @@
                             errorMessage.innerHTML = "Por favor ingrese un número";
                             return;
                         }
-                        url = '/queries/get_series_with_at_least_x_seasons.php';
+                        url = 'queries/get_series_with_at_least_x_seasons.php';
                         break;
                     case '2':
-                        url = '/queries/get_movies_and_series_with_x_title.php';
+                        url = 'queries/get_movies_and_series_with_x_title.php';
                         break;
                     case '3':
-                        url = '/queries/get_movies_that_belong_to_gender_or_subgender.php';
+                        url = 'queries/get_movies_that_belong_to_gender_or_subgender.php';
                         break;
                     case '4':
-                        url = '/queries/get_all_movies_user_x_has_access_to.php';
+                        url = 'queries/get_all_movies_user_x_has_access_to.php';
                         break;
                     case '5':
-                        url = '/queries/get_series_user_x_saw_more_than_one_chapter.php';
+                        url = 'queries/get_series_user_x_saw_more_than_one_chapter.php';
                         break;
                     case '6':
-                        url = '/queries/get_users_and_money_spent_on_movies.php';
+                        url = 'queries/get_users_and_money_spent_on_movies.php';
                         break;
                     default:
                         console.error('Invalid query index.');
@@ -114,7 +115,13 @@
                     },
                     success: function(data) {
                         $('#result-div').html(data);
-                    }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error running query:', error);
+                        console.log(xhr.responseText);
+                        console.log(xhr.status);
+                        console.log(xhr.statusText);
+                    },
                 });
             });
         });

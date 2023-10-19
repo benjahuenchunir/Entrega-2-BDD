@@ -7,14 +7,13 @@ if ($stmt->rowCount() > 0) {
                 <thead>
                     <tr>";
             foreach ($tableHeaders as $header) {
-                echo "<th>$header <button class='btn btn-secondary btn-sm' id=$header onclick='onSortButtonClicked(this.id)'>▲</button></th>";
+                echo "<th>".ucfirst($header)." <button class='btn btn-secondary btn-sm' id=$header onclick='onSortButtonClicked(this.id)'>▲</button></th>";
             }
             echo "</tr>
                 </thead>
                 <tbody>";
     
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                echo "<tr>";
                 foreach ($tableHeaders as $header) {
                     echo "<td class='$header'>" . $row[$header] . "</td>";
                 }
