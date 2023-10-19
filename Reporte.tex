@@ -1,8 +1,6 @@
 \documentclass{article}
 
-\usepackage[utf8]{inputenc} % Input encoding
-\usepackage[T1]{fontenc} % Font encoding
-\usepackage[spanish]{babel} % Language
+\usepackage{hyperref}
 
 \title{Entrega 2}
 \author{Grupo 131}
@@ -23,5 +21,17 @@
 \section{Consultas}
 
 \section{Supuestos}
+\begin{enumerate}
+    \item Para la consulta 6, "Dado un username ingresado por el usuario, muestre todas las series para las cuales el usuario ha visto más de un capítulo durante el último año", el ver dos veces el mismo capitulo tambien cuenta (issue \href{https://github.com/IIC2413/Syllabus-2023-2/issues/172}{\#72}).
+    \item Para las consultas que piden "en el ultimo año" se considero un intervalo de tiempo mayor (3años), ya que no hay datos del ultimo año (issue \href{https://github.com/IIC2413/Syllabus-2023-2/issues/175}{\#175})
+    \item Clasificación, puntuación y año son para la serie y no varían segun capitulo (issue \href{https://github.com/IIC2413/Syllabus-2023-2/issues/171}{\#171})
+    % TODO agregar genero Comedia a Rick y Morty
+    \item La serie "Rick  y Morty" no tienen genero en los datos entregados, se le asignó "Comedia" (issue \href{https://github.com/IIC2413/Syllabus-2023-2/issues/189}{\#189})
+    % TODO eliminar la columna estado
+    \item Se eliminó el atributo "estado" de la tabla de subscripciones, ya que solo representa si la subscripción esta activa o no, y eso se puede inferir de la fecha de termino (si existe o es nula). Asi se evita una dependencia transitiva.
+    % TODO agregar atributo "disponibilidad" a arriendos_peliculas y revisar si es necesario id_proovedor
+    \item Se asume que al igual que el costo de subscripcion y el costo de arriendo de una pelicula, los dias de arriendo de la pelicula (el atributo "disponibilidad") tambien puede variar en el tiempo.
+\end{enumerate}
+
 
 \end{document}
