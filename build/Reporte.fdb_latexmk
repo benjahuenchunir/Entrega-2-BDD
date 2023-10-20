@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1697731666 "d:/Users/benja/Documents/Universidad/2023/Bases de datos/Entrega-2-BDD/Reporte.tex" "build/Reporte.pdf" "Reporte" 1697731667 0
+["pdflatex"] 1697819518 "d:/Users/benja/Documents/Universidad/2023/Bases de datos/Entrega-2-BDD/Reporte.tex" "build/Reporte.pdf" "Reporte" 1697819519 0
   "C:/Users/benja/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1697730343 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/benja/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1692905524 24120620 c308aa357a39a8322e021a78aed1e040 ""
   "C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx12.tfm" 1136765053 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -50,10 +50,10 @@
   "C:/Users/benja/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty" 1576433952 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "C:/Users/benja/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/benja/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "Reporte.tex" 1697731665 1906 55cc676d17945719770a1fc105a64aa4 ""
-  "build/Reporte.aux" 1697731667 1237 ea51adb86a1b4fac0d2150f49f80ff23 "pdflatex"
-  "build/Reporte.out" 1697731667 776 c76cbb1de96415e2199cbba963de1bfb "pdflatex"
-  "d:/Users/benja/Documents/Universidad/2023/Bases de datos/Entrega-2-BDD/Reporte.tex" 1697731665 1906 55cc676d17945719770a1fc105a64aa4 ""
+  "Reporte.tex" 1697819518 1755 690be3d6545ccf4dee378fcf8c7d10a9 ""
+  "build/Reporte.aux" 1697819519 1237 ea51adb86a1b4fac0d2150f49f80ff23 "pdflatex"
+  "build/Reporte.out" 1697819519 776 c76cbb1de96415e2199cbba963de1bfb "pdflatex"
+  "d:/Users/benja/Documents/Universidad/2023/Bases de datos/Entrega-2-BDD/Reporte.tex" 1697819518 1755 690be3d6545ccf4dee378fcf8c7d10a9 ""
   (generated)
   "build/Reporte.aux"
   "build/Reporte.log"

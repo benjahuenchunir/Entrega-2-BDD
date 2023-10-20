@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.24)  19 OCT 2023 12:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.24)  20 OCT 2023 12:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -183,15 +183,15 @@ Package rerunfilecheck Info: File `Reporte.out' has not changed.
 (rerunfilecheck)             Checksum: C76CBB1DE96415E2199CBBA963DE1BFB;776.
  ) 
 Here is how much of TeX's memory you used:
- 7547 strings out of 475502
- 119670 string characters out of 5761813
+ 7548 strings out of 475502
+ 119678 string characters out of 5761813
  1926248 words of memory out of 5000000
- 28761 multiletter control sequences out of 15000+600000
+ 28762 multiletter control sequences out of 15000+600000
  561709 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,6n,79p,422b,428s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,6n,79p,424b,428s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on "d:\Users\benja\Documents\Universidad\2023\Bases de datos\Entrega-2-BDD\build\Reporte.pdf" (1 page, 63853 bytes).
+Output written on "d:\Users\benja\Documents\Universidad\2023\Bases de datos\Entrega-2-BDD\build\Reporte.pdf" (1 page, 63647 bytes).
 PDF statistics:
  69 PDF objects out of 1000 (max. 8388607)
  14 named destinations out of 1000 (max. 500000)
