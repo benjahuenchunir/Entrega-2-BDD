@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1697834251 "d:/Users/benja/Documents/Universidad/2023/Bases de datos/Entrega-2-BDD/Reporte.tex" "build/Reporte.pdf" "Reporte" 1697834252 0
+["pdflatex"] 1697840035 "d:/Users/benja/Documents/Universidad/2023/Bases de datos/Entrega-2-BDD/Reporte.tex" "build/Reporte.pdf" "Reporte" 1697840036 0
   "C:/Users/benja/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1697834249 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/benja/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1692905524 24120620 c308aa357a39a8322e021a78aed1e040 ""
   "C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx10.tfm" 1136765053 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -83,10 +83,10 @@
   "C:/Users/benja/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "Esquemas/EsquemaRelacionalFinal.pdf" 1697828369 42525 770ad7d905fbc8250f5a9d44a56597a1 ""
   "Esquemas/diagrama_ER.pdf" 1697770429 65487 6cd989d03f4aa5c9010072e26b2ee8f2 ""
-  "Reporte.tex" 1697834236 10655 9b0d19ade2cdf8ac1aaf0f98b4004474 ""
-  "build/Reporte.aux" 1697834251 1290 73b30ca1577cb1be631af6916fd26180 "pdflatex"
-  "build/Reporte.out" 1697834251 673 a4f0de0aadc259c10b4e84a9a249919a "pdflatex"
-  "d:/Users/benja/Documents/Universidad/2023/Bases de datos/Entrega-2-BDD/Reporte.tex" 1697834236 10655 9b0d19ade2cdf8ac1aaf0f98b4004474 ""
+  "Reporte.tex" 1697840034 10655 ef5020234d9304fd2ebe0c76c01d82da ""
+  "build/Reporte.aux" 1697840036 1290 73b30ca1577cb1be631af6916fd26180 "pdflatex"
+  "build/Reporte.out" 1697840036 673 a4f0de0aadc259c10b4e84a9a249919a "pdflatex"
+  "d:/Users/benja/Documents/Universidad/2023/Bases de datos/Entrega-2-BDD/Reporte.tex" 1697840034 10655 ef5020234d9304fd2ebe0c76c01d82da ""
   (generated)
   "build/Reporte.aux"
   "build/Reporte.log"

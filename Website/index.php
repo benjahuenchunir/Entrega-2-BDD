@@ -21,9 +21,9 @@
                 <form id="data-form">
                     <label for="queryDropdown">Seleccione una consulta:</label>
                     <select id="queryDropdown" name="queryIndex" class="form-control">
-                        <option value="0">Muestre todas las películas junto con sus proovedores, siempre y cuando el proovedor las ofrezca de manera gratuita</option>
+                        <option value="0">Muestre todas las películas junto con sus proveedores, siempre y cuando el proveedor las ofrezca de manera gratuita</option>
                         <option value="1">Dado un numero n ingresado por el usuario, muestre todas las series que tengan al menos n temporadas</option>
-                        <option value="2">Dado un titulo ingresado por el usuario, muestre todas las películas/series con ese título y los proovedores que las ofrecen</option>
+                        <option value="2">Dado un titulo ingresado por el usuario, muestre todas las películas/series con ese título y los proveedores que las ofrecen</option>
                         <option value="3">Dado un genero seleccionado por el usuario, muestre todas las películas que pertenezcan a ese género, o que pertenezcan a alguno de sus subgéneros inmediatos</option>
                         <option value="4">Dado un username ingresado por el usuario, muestre todas las películas a las que tiene acceso dicho usuario</option>
                         <option value="5">Dado un username ingresado por el usuario, muestre todas las series para las cuales el usuario ingresado ha visto mas de un capítulo en el último año</option>

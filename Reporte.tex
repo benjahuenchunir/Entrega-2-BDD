@@ -24,9 +24,9 @@
 
 \section{Dependencias funcionales y justificación}
 \begin{enumerate}
-    \item proovedores\_peliculas \\
+    \item proveedores\_peliculas \\
     Las dependencias de esta tabla están en BCNF dado que no existen repeticiones de datos y cada columna depende unicamente de la llave mínimal de la siguiente forma: \\
-    id\_proovedor, id\_pelicula $\rightarrow$ precio, dias\_arriendo
+    id\_proveedor, id\_pelicula $\rightarrow$ precio, dias\_arriendo
     \item Proveedores \\
     Las dependencias de esta tabla están en BCNF dado que no existen repeticiones de datos y cada columna depende unicamente de la llave mínimal de la siguiente forma: \\
     id $\rightarrow$ nombre, costo
@@ -72,7 +72,7 @@
 
 \section{Consultas}
 \begin{enumerate}
-    \item \textbf{Muestre todas las películas junto con sus proovedores, siempre y cuando el proovedor las ofrezca de manera gratuita} \\
+    \item \textbf{Muestre todas las películas junto con sus proveedores, siempre y cuando el proveedor las ofrezca de manera gratuita} \\
     SELECT peliculas.titulo AS pelicula, proveedores.nombre AS proveedor FROM peliculas
     INNER JOIN proveedores\_peliculas ON peliculas.id = proveedores\_peliculas.id\_pelicula
     INNER JOIN proveedores ON proveedores\_peliculas.id\_proveedor = proveedores.id
@@ -82,7 +82,7 @@
     INNER JOIN capitulos ON series.id = capitulos.id\_serie
     GROUP BY series.id, series.titulo
     HAVING COUNT(DISTINCT capitulos.numero\_temporada) $>$= \textcolor{cyan}{numero\_temporadas};
-    \item \textbf{Dado un titulo ingresado por el usuario, muestre todas las películas/series con ese título y los proovedores que las ofrecen} \\
+    \item \textbf{Dado un titulo ingresado por el usuario, muestre todas las películas/series con ese título y los proveedores que las ofrecen} \\
     SELECT * FROM (
         SELECT peliculas.titulo AS titulo, proveedores.nombre AS proveedor FROM peliculas
         INNER JOIN proveedores\_peliculas ON peliculas.id = proveedores\_peliculas.id\_pelicula
