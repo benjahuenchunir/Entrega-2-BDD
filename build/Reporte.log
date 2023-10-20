@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.24)  20 OCT 2023 14:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.24)  20 OCT 2023 15:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -172,14 +172,88 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 12.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 23.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 23.
 
-Overfull \hbox (39.77177pt too wide) in paragraph at lines 23--28
-\OT1/cmr/m/n/10 dores[]peliculas.id[]proveedor = provee-dores.id WHERE provee-dores[]peliculas.precio
+Underfull \hbox (badness 10000) in paragraph at lines 27--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--35
+
  []
 
 [1
 
-{C:/Users/benja/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] (d:\Users\benja\Documents\Universidad\2023\Bases de datos\Entrega-2-BDD\build\Reporte.aux)
+{C:/Users/benja/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 35--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--41
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--44
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--53
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--56
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 56--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--61
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--65
+
+ []
+
+
+Overfull \hbox (39.77177pt too wide) in paragraph at lines 69--74
+\OT1/cmr/m/n/10 dores[]peliculas.id[]proveedor = provee-dores.id WHERE provee-dores[]peliculas.precio
+ []
+
+[3] [4] (d:\Users\benja\Documents\Universidad\2023\Bases de datos\Entrega-2-BDD\build\Reporte.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
@@ -188,17 +262,17 @@ Package rerunfilecheck Info: File `Reporte.out' has not changed.
 (rerunfilecheck)             Checksum: C76CBB1DE96415E2199CBBA963DE1BFB;776.
  ) 
 Here is how much of TeX's memory you used:
- 7552 strings out of 475502
- 119714 string characters out of 5761813
+ 7572 strings out of 475502
+ 119865 string characters out of 5761813
  1926248 words of memory out of 5000000
- 28763 multiletter control sequences out of 15000+600000
+ 28765 multiletter control sequences out of 15000+600000
  561709 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,6n,79p,424b,522s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on "d:\Users\benja\Documents\Universidad\2023\Bases de datos\Entrega-2-BDD\build\Reporte.pdf" (2 pages, 67235 bytes).
+ 75i,6n,79p,424b,525s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "d:\Users\benja\Documents\Universidad\2023\Bases de datos\Entrega-2-BDD\build\Reporte.pdf" (4 pages, 81451 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
+ 107 PDF objects out of 1000 (max. 8388607)
+ 35 named destinations out of 1000 (max. 500000)
  49 words of extra memory for PDF output out of 10000 (max. 10000000)
 

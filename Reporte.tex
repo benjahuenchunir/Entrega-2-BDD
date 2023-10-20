@@ -17,6 +17,52 @@
 \section{Esquema relacional}
 
 \section{Dependencias funcionales y justificación}
+\begin{enumerate}
+    \item proovedores\_peliculas \\
+    Las dependencias de esta tabla están en BCNF dado que no existen repeticiones de datos y cada columna depende unicamente de la llave mínimal de la siguiente forma: \\
+    id\_proovedor, id\_pelicula $\rightarrow$ precio, dias\_arriendo
+    \item Proveedores \\
+    Las dependencias de esta tabla están en BCNF dado que no existen repeticiones de datos y cada columna depende unicamente de la llave mínimal de la siguiente forma: \\
+    id $\rightarrow$ nombre, costo
+    \item proveedores\_series \\
+    Las dependencias de esta tabla están en BCNF dado que no existen repeticiones de datos y cada columna es independiente, por lo que no existen dependencias que transgredan BCNF. \\
+    \item arriendos\_peliculas \\
+    Las dependencias de esta tabla están en BCNF dado que no existen repeticiones de datos y cada columna depende unicamente de la llave mínimal de la siguiente forma: \\
+    id $\rightarrow$ id\_usuario, id\_pelicula, fecha, monto, dias\_arriendo \\
+    \item Subscripciones \\
+    Las dependencias de esta tabla están en BCNF dado que no existen repeticiones de datos y cada columna depende unicamente de la llave mínimal de la siguiente forma: \\
+    id $\rightarrow$ id\_usuario, id\_proveedor, estado, fecha\_inicio, fecha\_termino, costo \\
+    \item Usuarios \\
+    Las dependencias de esta tabla están en BCNF dado que no existen repeticiones de datos y cada columna depende unicamente de la llave mínimal de la siguiente forma: \\
+    id $\rightarrow$ nombre, mail, password, username \\
+    \item Pagos \\
+    Las dependencias de esta tabla están en BCNF dado que no existen repeticiones de datos y cada columna depende unicamente de la llave mínimal de la siguiente forma: \\
+    id $\rightarrow$ id\_subscripcion, fecha \\
+    \item peliculas \\
+    Las dependencias de esta tabla están en BCNF dado que no existen repeticiones de datos y cada columna depende unicamente de la llave mínimal de la siguiente forma: \\
+    id $\rightarrow$ titulo, puntuacion, clasificacion, año, duracion \\
+    \item historial\_peliculas \\
+    Las dependencias de esta tabla están en BCNF dado que no existen repeticiones de datos y cada columna depende unicamente de la llave mínimal de la siguiente forma: \\
+    id $\rightarrow$ id\_usuario, id\_pelicula, fecha \\
+    \item historial\_series \\
+    Las dependencias de esta tabla están en BCNF dado que no existen repeticiones de datos y cada columna depende unicamente de la llave mínimal de la siguiente forma: \\
+    id $\rightarrow$ id\_usuario, id\_capitulo, fecha \\
+    \item capitulos \\
+    Las dependencias de esta tabla están en BCNF dado que no existen repeticiones de datos y cada columna depende unicamente de la llave mínimal de la siguiente forma: \\
+    id $\rightarrow$ id\_serie, titulo, duracion, numero\_temporada \\
+    \item series \\
+    Las dependencias de esta tabla están en BCNF dado que no existen repeticiones de datos y cada columna depende unicamente de la llave mínimal de la siguiente forma: \\
+    id $\rightarrow$ titulo, puntuacion, clasificacion, año \\
+    \item generos\_peliculas \\
+    Las dependencias de esta tabla están en BCNF dado que no existen repeticiones de datos y cada columna es independiente, por lo que no existen dependencias que transgredan BCNF. \\
+     \item generos \\
+    Las dependencias de esta tabla están en BCNF dado que no existen repeticiones de datos y cada columna depende unicamente de la llave mínimal de la siguiente forma: \\
+    id $\rightarrow$ nombre \\
+    \item generos\_series \\
+    Las dependencias de esta tabla están en BCNF dado que no existen repeticiones de datos y cada columna es independiente, por lo que no existen dependencias que transgredan BCNF. \\
+    \item generos\_subgeneros\\
+    Las dependencias de esta tabla están en BCNF dado que no existen repeticiones de datos y cada columna es independiente, por lo que no existen dependencias que transgredan BCNF. \\
+\end{enumerate}
 
 \section{Consultas}
 \begin{enumerate}
