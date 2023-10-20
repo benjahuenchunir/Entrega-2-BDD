@@ -10,10 +10,11 @@
 </head>
 
 <body>
-    <h1>Query Builder</h1>
+                <img src="imgs/logo.png" width="300" height="300" class="mx-auto d-block">
     <div class="container mt-5">
-        
-        <img src="imgs/popcorn.png" width="300" height="300">
+    
+    
+            
         <form id="data-form">
             <label for="queryDropdown">Seleccione una consulta:</label>
             <select id="queryDropdown" onchange="toggleInputOrDropdown()" name="queryIndex" class="form-control">
