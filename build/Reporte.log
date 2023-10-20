@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.24)  20 OCT 2023 15:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.24)  20 OCT 2023 16:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -136,64 +136,210 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
 \Hy@SectionHShift=\skip50
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpages.sty
+Package: pdfpages 2022/12/19 v0.5x Insert pages of external PDF documents (AM)
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count271
+\calc@Bcount=\count272
+\calc@Adimen=\dimen145
+\calc@Bdimen=\dimen146
+\calc@Askip=\skip51
+\calc@Bskip=\skip52
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count273
+\calc@Cskip=\skip53
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
+Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
+\ESO@tempdima=\dimen147
+\ESO@tempdimb=\dimen148
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+)
+\Gin@req@height=\dimen149
+\Gin@req@width=\dimen150
+)
+\AM@pagewidth=\dimen151
+\AM@pageheight=\dimen152
+\AM@fboxrule=\dimen153
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdftex.def
+File: pppdftex.def 2022/12/19 v0.5x Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count274
+\AM@pagebox=\box51
+\AM@global@opts=\toks18
+\AM@pagecnt=\count275
+\AM@toc@title=\toks19
+\AM@lof@heading=\toks20
+\c@AM@survey=\count276
+\AM@templatesizebox=\box52
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2023/07/15 v3.92 The Babel package
+\babel@savecnt=\count277
+\U@D=\dimen154
+\l@unhyphenated=\language79
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count278
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.ldf
+Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+\es@quottoks=\toks21
+\es@quotdepth=\count279
+Package babel Info: Making " an active character on input line 570.
+Package babel Info: Making . an active character on input line 675.
+Package babel Info: Making < an active character on input line 722.
+Package babel Info: Making > an active character on input line 722.
+)) (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/es\babel-spanish.tex
+Package babel Info: Importing font and identification data for spanish
+(babel)             from babel-es.ini. Reported on input line 11.
 ) (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count271
-\l__pdf_internal_box=\box51
-) (d:\Users\benja\Documents\Universidad\2023\Bases de datos\Entrega-2-BDD\build\Reporte.aux)
+\l__color_backend_stack_int=\count280
+\l__pdf_internal_box=\box53
+) (d:\Users\benja\Documents\Universidad\2023\Bases de datos\Entrega-2-BDD\build\Reporte.aux
+LaTeX Info: Redefining \. on input line 22.
+LaTeX Info: Redefining \% on input line 22.
+)
 \openout1 = `Reporte.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-Package hyperref Info: Link coloring OFF on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+Package hyperref Info: Link coloring OFF on input line 13.
  (d:\Users\benja\Documents\Universidad\2023\Bases de datos\Entrega-2-BDD\build\Reporte.out) (d:\Users\benja\Documents\Universidad\2023\Bases de datos\Entrega-2-BDD\build\Reporte.out)
 \@outlinefile=\write3
 \openout3 = `Reporte.out'.
 
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count281
+\scratchdimen=\dimen155
+\scratchbox=\box54
+\nofMPsegments=\count282
+\nofMParguments=\count283
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count284
+\MPscratchDim=\dimen156
+\MPnumerator=\count285
+\makeMPintoPDFobject=\count286
+\everyMPtoPDFconversion=\toks23
+) (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+)) (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
+ (C:\Users\benja\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+))
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 12.
+(Font)              <12> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 12.
+(Font)              <8> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 12.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 23.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 23.
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--29
-
- []
+(Font)              <6> on input line 16.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--32
+pdfTeX warning: pdflatex (file ./Esquemas/diagrama_ER.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Esquemas/diagrama_ER.pdf, id=23, 903.375pt x 847.24525pt>
+File: Esquemas/diagrama_ER.pdf Graphic file (type pdf)
+<use Esquemas/diagrama_ER.pdf>
+Package pdftex.def Info: Esquemas/diagrama_ER.pdf  used on input line 19.
+(pdftex.def)             Requested size: 455.24408pt x 426.96991pt.
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--35
-
+Overfull \hbox (125.24408pt too wide) in paragraph at lines 19--20
+[][] 
  []
 
 [1
 
 {C:/Users/benja/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+
+pdfTeX warning: pdflatex (file ./Esquemas/EsquemaRelacionalFinal.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Esquemas/EsquemaRelacionalFinal.pdf, id=32, 1047.915pt x 941.43718pt>
+File: Esquemas/EsquemaRelacionalFinal.pdf Graphic file (type pdf)
+<use Esquemas/EsquemaRelacionalFinal.pdf>
+Package pdftex.def Info: Esquemas/EsquemaRelacionalFinal.pdf  used on input line 23.
+(pdftex.def)             Requested size: 455.24408pt x 408.97598pt.
+
+Overfull \hbox (125.24408pt too wide) in paragraph at lines 23--24
+[][] 
+ []
+
+[2 <./Esquemas/diagrama_ER.pdf>]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 29.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 29.
+ [3 <./Esquemas/EsquemaRelacionalFinal.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 33--35
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 35--38
 
  []
@@ -223,56 +369,119 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--53
 
  []
 
-
+[4]
 Underfull \hbox (badness 10000) in paragraph at lines 53--56
 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 56--58
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--59
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--61
+Underfull \hbox (badness 10000) in paragraph at lines 59--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--63
+Underfull \hbox (badness 10000) in paragraph at lines 62--64
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--65
+Underfull \hbox (badness 10000) in paragraph at lines 64--67
 
  []
 
 
-Overfull \hbox (39.77177pt too wide) in paragraph at lines 69--74
-\OT1/cmr/m/n/10 dores[]peliculas.id[]proveedor = provee-dores.id WHERE provee-dores[]peliculas.precio
+Underfull \hbox (badness 10000) in paragraph at lines 67--69
+
  []
 
-[3] [4] (d:\Users\benja\Documents\Universidad\2023\Bases de datos\Entrega-2-BDD\build\Reporte.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--71
+
+ []
+
+[5]
+Overfull \hbox (29.21619pt too wide) in paragraph at lines 75--80
+\OT1/cmr/m/n/10 res[]peliculas.id[]proveedor = pro-vee-do-res.id WHE-RE pro-vee-do-res[]peliculas.precio
+ []
+
+
+Overfull \hbox (35.87515pt too wide) in paragraph at lines 80--85
+\OT1/cmr/m/n/10 SELECT se-ries.titulo AS se-rie, COUNT(DISTINCT ca-pi-tu-los.numero[]temporada)
+ []
+
+
+Overfull \hbox (11.44963pt too wide) in paragraph at lines 80--85
+\OT1/cmr/m/n/10 COUNT(DISTINCT ca-pi-tu-los.numero[]temporada) $\OML/cmm/m/it/10 >$\OT1/cmr/m/n/10 = []nu-me-ro[]temporadas[]; 
+ []
+
+
+Overfull \hbox (7.13513pt too wide) in paragraph at lines 85--95
+\OT1/cmr/m/n/10 SELECT * FROM ( SE-LECT pe-li-cu-las.titulo AS ti-tu-lo, pro-vee-do-res.nombre
+ []
+
+
+Overfull \hbox (14.36955pt too wide) in paragraph at lines 95--103
+\OT1/cmr/m/n/10 ros[]peliculas.id[]pelicula IN-NER JOIN ge-ne-ros ON ge-ne-ros[]peliculas.id[]genero
+ []
+
+
+Overfull \hbox (10.5084pt too wide) in paragraph at lines 95--103
+\OT1/cmr/m/n/10 ros[]peliculas.id[]genero IN ( SE-LECT id[]subgenero FROM ge-ne-ro[]subgeneros
+ []
+
+[6]
+Overfull \hbox (19.38179pt too wide) in paragraph at lines 104--116
+\OT1/cmr/m/n/10 JOIN pro-vee-do-res[]peliculas ON pe-li-cu-las.id = pro-vee-do-res[]peliculas.id[]pelicula
+ []
+
+
+Overfull \hbox (7.0306pt too wide) in paragraph at lines 104--116
+\OT1/cmr/m/n/10 IN-NER JOIN subs-crip-cio-nes ON pro-vee-do-res[]peliculas.id[]proveedor = subs-
+ []
+
+
+Overfull \hbox (7.89177pt too wide) in paragraph at lines 104--116
+\OT1/cmr/m/n/10 crip-cio-nes.id[]proveedor IN-NER JOIN usua-rios ON subs-crip-cio-nes.id[]usuario
+ []
+
+
+Overfull \hbox (35.2607pt too wide) in paragraph at lines 104--116
+\OT1/cmr/m/n/10 RRENT[]DATE $\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 = arrien-dos[]peliculas.fecha + arrien-dos[]peliculas.dias[]arriendo))
+ []
+
+
+Overfull \hbox (24.99019pt too wide) in paragraph at lines 125--129
+\OT1/cmr/m/n/10 dos[]peliculas.id[]usuario = usua-rios.id GROUP BY usua-rios.id, usua-rios.nombre; 
+ []
+
+[7] [8] (d:\Users\benja\Documents\Universidad\2023\Bases de datos\Entrega-2-BDD\build\Reporte.aux
+LaTeX Info: Redefining \. on input line 22.
+LaTeX Info: Redefining \% on input line 22.
+)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
  ***********
 Package rerunfilecheck Info: File `Reporte.out' has not changed.
-(rerunfilecheck)             Checksum: C76CBB1DE96415E2199CBBA963DE1BFB;776.
+(rerunfilecheck)             Checksum: A4F0DE0AADC259C10B4E84A9A249919A;673.
  ) 
 Here is how much of TeX's memory you used:
- 7572 strings out of 475502
- 119865 string characters out of 5761813
- 1926248 words of memory out of 5000000
- 28765 multiletter control sequences out of 15000+600000
- 561709 words of font info for 48 fonts, out of 8000000 for 9000
+ 11223 strings out of 475502
+ 179832 string characters out of 5761813
+ 1927248 words of memory out of 5000000
+ 32316 multiletter control sequences out of 15000+600000
+ 562017 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,6n,79p,424b,525s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "d:\Users\benja\Documents\Universidad\2023\Bases de datos\Entrega-2-BDD\build\Reporte.pdf" (4 pages, 81451 bytes).
+ 75i,7n,79p,424b,562s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "d:\Users\benja\Documents\Universidad\2023\Bases de datos\Entrega-2-BDD\build\Reporte.pdf" (8 pages, 229458 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
- 49 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 174 PDF objects out of 1000 (max. 8388607)
+ 44 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
