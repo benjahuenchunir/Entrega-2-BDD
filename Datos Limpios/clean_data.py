@@ -6,7 +6,7 @@ def get_proovedores(df: pd.DataFrame):
     df = df[[Columns.ID.value, Columns.NOMBRE.value, Columns.COSTO.value]]
     df = df.drop_duplicates()
     df = df.sort_values(by=Columns.ID.value)
-    df.to_csv(PathsClean.PATH_PROVEEDORES.value, index=False)
+    df.to_csv(encoding="utf8", path_or_buf=PathsClean.PATH_PROVEEDORES.value, index=False)
 
 
 def get_peliculas(df: pd.DataFrame):
@@ -24,7 +24,7 @@ def get_peliculas(df: pd.DataFrame):
     peliculas[Columns.ID.value] = peliculas[Columns.ID.value].astype(int)
     peliculas.drop_duplicates(subset=[Columns.ID.value], inplace=True)
     peliculas.sort_values(by=Columns.ID.value, inplace=True)
-    peliculas.to_csv(PathsClean.PATH_PELICULAS.value, index=False)
+    peliculas.to_csv(encoding="utf8", path_or_buf=PathsClean.PATH_PELICULAS.value, index=False)
 
 
 def get_series(df: pd.DataFrame):
@@ -41,7 +41,7 @@ def get_series(df: pd.DataFrame):
     series.drop_duplicates(subset=[Columns.ID.value], inplace=True)
     series.sort_values(by=Columns.ID.value, inplace=True)
     series[Columns.ID.value] = series[Columns.ID.value].astype(int)
-    series.to_csv(PathsClean.PATH_SERIES.value, index=False)
+    series.to_csv(encoding="utf8", path_or_buf=PathsClean.PATH_SERIES.value, index=False)
 
 
 def get_capitulos(df: pd.DataFrame):
@@ -67,7 +67,7 @@ def get_capitulos(df: pd.DataFrame):
     capitulos[Columns.NUMERO_TEMPORADA.value] = capitulos[Columns.NUMERO_TEMPORADA.value].astype(int)
     capitulos.drop_duplicates(subset=[Columns.ID.value], inplace=True)
     capitulos.sort_values(by=[Columns.ID_SERIE.value, Columns.ID.value], inplace=True)
-    capitulos.to_csv(PathsClean.PATH_CAPITULOS.value, index=False)
+    capitulos.to_csv(encoding="utf8", path_or_buf=PathsClean.PATH_CAPITULOS.value, index=False)
 
 
 def get_generos_series(df: pd.DataFrame):
@@ -79,7 +79,7 @@ def get_generos_series(df: pd.DataFrame):
     )
     generos_series.drop_duplicates(inplace=True)
     generos = pd.read_csv(
-        PathsClean.PATH_GENEROS.value, sep=SEPARADOR, encoding="utf-8"
+        PathsClean.PATH_GENEROS.value, sep=SEPARADOR, encoding="utf8"
     )
     generos_series = pd.merge(
         generos_series, generos, on=Columns.GENERO.value, how="left"
@@ -96,7 +96,7 @@ def get_generos_series(df: pd.DataFrame):
     )
     generos_series[Columns.ID_SERIE.value] = generos_series[Columns.ID_SERIE.value].astype(int)
     generos_series[Columns.ID_GENERO.value] = generos_series[Columns.ID_GENERO.value].astype(int)
-    generos_series.to_csv(PathsClean.PATH_GENEROS_SERIES.value, index=False)
+    generos_series.to_csv(encoding="utf8", path_or_buf=PathsClean.PATH_GENEROS_SERIES.value, index=False)
 
 
 def get_generos_peliculas(df: pd.DataFrame):
@@ -107,7 +107,7 @@ def get_generos_peliculas(df: pd.DataFrame):
         columns={Columns.PID.value: Columns.ID_PELICULA.value}, inplace=True
     )
     generos = pd.read_csv(
-        PathsClean.PATH_GENEROS.value, sep=SEPARADOR, encoding="utf-8"
+        PathsClean.PATH_GENEROS.value, sep=SEPARADOR, encoding="utf8"
     )
     generos_peliculas.drop_duplicates(inplace=True)
     generos_peliculas = pd.merge(
@@ -121,7 +121,7 @@ def get_generos_peliculas(df: pd.DataFrame):
         by=[Columns.ID_PELICULA.value, Columns.ID_GENERO.value], inplace=True
     )
     generos_peliculas[Columns.ID_PELICULA.value] = generos_peliculas[Columns.ID_PELICULA.value].astype(int)
-    generos_peliculas.to_csv(PathsClean.PATH_GENEROS_PELICULAS.value, index=False)
+    generos_peliculas.to_csv(encoding="utf8", path_or_buf=PathsClean.PATH_GENEROS_PELICULAS.value, index=False)
 
 
 def get_proovedores_peliculas(df: pd.DataFrame):
@@ -147,13 +147,13 @@ def get_proovedores_peliculas(df: pd.DataFrame):
     proovedores_peliculas[Columns.PRECIO.value] = proovedores_peliculas[
         Columns.PRECIO.value
     ].astype("Int64")
-    proovedores_peliculas[Columns.DISPONIBILIDAD.value] = proovedores_peliculas[
-        Columns.DISPONIBILIDAD.value
+    proovedores_peliculas[Columns.DIAS_ARRIENDO.value] = proovedores_peliculas[
+        Columns.DIAS_ARRIENDO.value
     ].astype("Int64")
     proovedores_peliculas.sort_values(
         by=[Columns.ID_PROOVEDOR.value, Columns.ID_PELICULA.value], inplace=True
     )
-    proovedores_peliculas.to_csv(
+    proovedores_peliculas.to_csv(encoding="utf8", path_or_buf=
         PathsClean.PATH_PELICULAS_PROVEEDORES.value, index=False
     )
 
@@ -173,7 +173,7 @@ def get_proovedores_series(df: pd.DataFrame):
         by=[Columns.ID_PROOVEDOR.value, Columns.ID_SERIE.value], inplace=True
     )
     proovedores_series[Columns.ID_SERIE.value] = proovedores_series[Columns.ID_SERIE.value].astype(int)
-    proovedores_series.to_csv(PathsClean.PATH_SERIES_PROVEEDORES.value, index=False)
+    proovedores_series.to_csv(encoding="utf8", path_or_buf=PathsClean.PATH_SERIES_PROVEEDORES.value, index=False)
 
 
 def get_historial_peliculas(df: pd.DataFrame):
@@ -194,7 +194,7 @@ def get_historial_peliculas(df: pd.DataFrame):
     historial_peliculas.index += 1
     historial_peliculas.index.name = Columns.ID.value
     historial_peliculas[Columns.ID_PELICULA.value] = historial_peliculas[Columns.ID_PELICULA.value].astype(int)
-    historial_peliculas.to_csv(PathsClean.PATH_HISTORIAL_PELICULAS.value, index=True)
+    historial_peliculas.to_csv(encoding="utf8", path_or_buf=PathsClean.PATH_HISTORIAL_PELICULAS.value, index=True)
 
 
 def get_historial_series(df: pd.DataFrame):
@@ -215,7 +215,7 @@ def get_historial_series(df: pd.DataFrame):
     historial_series.index += 1
     historial_series.index.name = Columns.ID.value
     historial_series[Columns.ID_CAPITULO.value] = historial_series[Columns.ID_CAPITULO.value].astype(int)
-    historial_series.to_csv(PathsClean.PATH_HISTORIAL_SERIES.value, index=True)
+    historial_series.to_csv(encoding="utf8", path_or_buf=PathsClean.PATH_HISTORIAL_SERIES.value, index=True)
 
 
 def get_pagos(df: pd.DataFrame):
@@ -233,7 +233,7 @@ def get_pagos(df: pd.DataFrame):
         by=[Columns.ID.value, Columns.ID_SUBSCRIPCION.value], inplace=True
     )
     pagos[Columns.ID_SUBSCRIPCION.value] = pagos[Columns.ID_SUBSCRIPCION.value].astype(int)
-    pagos.to_csv(PathsClean.PATH_PAGOS.value, index=False)
+    pagos.to_csv(encoding="utf8", path_or_buf=PathsClean.PATH_PAGOS.value, index=False)
 
 
 def get_arriendos_peliculas(df: pd.DataFrame):
@@ -257,7 +257,7 @@ def get_arriendos_peliculas(df: pd.DataFrame):
         inplace=True,
     )
     proveedores_peliculas = pd.read_csv(
-        PathsClean.PATH_PELICULAS_PROVEEDORES.value, sep=SEPARADOR, encoding="utf-8"
+        PathsClean.PATH_PELICULAS_PROVEEDORES.value, sep=SEPARADOR, encoding="utf8"
     )
     pagos = pd.merge(
         pagos,
@@ -281,7 +281,7 @@ def get_arriendos_peliculas(df: pd.DataFrame):
     )
     pagos[Columns.DIAS_ARRIENDO.value] = pagos[Columns.DIAS_ARRIENDO.value].astype(int)
     pagos[Columns.ID_PELICULA.value] = pagos[Columns.ID_PELICULA.value].astype(int)
-    pagos.to_csv(PathsClean.PATH_ARRIENDOS_PELICULAS.value, index=False)
+    pagos.to_csv(encoding="utf8", path_or_buf=PathsClean.PATH_ARRIENDOS_PELICULAS.value, index=False)
 
 
 def get_generos(df: pd.DataFrame):
@@ -291,13 +291,13 @@ def get_generos(df: pd.DataFrame):
     generos.reset_index(drop=True, inplace=True)
     generos.index += 1
     generos.index.name = Columns.ID.value
-    generos.to_csv(PathsClean.PATH_GENEROS.value, index=True)
+    generos.to_csv(encoding="utf8", path_or_buf=PathsClean.PATH_GENEROS.value, index=True)
 
 
 def get_subgeneros(df: pd.DataFrame):
     df.dropna(subset=[Columns.NOMBRE_SUBGENERO.value], inplace=True)
     generos = pd.read_csv(
-        PathsClean.PATH_GENEROS.value, sep=SEPARADOR, encoding="utf-8"
+        PathsClean.PATH_GENEROS.value, sep=SEPARADOR, encoding="utf8"
     )
     generos_subgeneros = pd.merge(generos, df, on=Columns.GENERO.value, how="right")
     ids = pd.merge(
@@ -318,18 +318,18 @@ def get_subgeneros(df: pd.DataFrame):
     only_ids.sort_values(
         by=[Columns.ID_GENERO.value, Columns.ID_SUBGENERO.value], inplace=True
     )
-    only_ids.to_csv(PathsClean.PATH_GENERO_SUBGENERO.value, index=False)
+    only_ids.to_csv(encoding="utf8", path_or_buf=PathsClean.PATH_GENERO_SUBGENERO.value, index=False)
 
 
 def clean_proovedores():
-    df = pd.read_csv(Paths.PATH_PROVEEDORES.value, sep=SEPARADOR, encoding="utf-8")
+    df = pd.read_csv(Paths.PATH_PROVEEDORES.value, sep=SEPARADOR, encoding="utf8")
     get_proovedores(df)
     get_proovedores_peliculas(df)
     get_proovedores_series(df)
 
 
 def clean_multimedia():
-    df = pd.read_csv(Paths.PATH_MULTIMEDIA.value, sep=SEPARADOR, encoding="utf-8")
+    df = pd.read_csv(Paths.PATH_MULTIMEDIA.value, sep=SEPARADOR, encoding="utf8")
     get_peliculas(df)
     get_series(df)
     get_capitulos(df)
@@ -338,13 +338,13 @@ def clean_multimedia():
 
 
 def clean_usuarios():
-    df = pd.read_csv(Paths.PATH_USUARIOS.value, sep=SEPARADOR, encoding="utf-8")
+    df = pd.read_csv(Paths.PATH_USUARIOS.value, sep=SEPARADOR, encoding="utf8")
     df.sort_values(by=Columns.ID.value, inplace=True)
-    df.to_csv(PathsClean.PATH_USUARIOS.value, index=False)
+    df.to_csv(encoding="utf8", path_or_buf=PathsClean.PATH_USUARIOS.value, index=False)
 
 
 def clean_subscripciones():
-    df = pd.read_csv(Paths.PATH_SUBSCRIPCIONES.value, sep=SEPARADOR, encoding="utf-8")
+    df = pd.read_csv(Paths.PATH_SUBSCRIPCIONES.value, sep=SEPARADOR, encoding="utf8")
     subscripciones = df[
         [
             Columns.ID.value,
@@ -363,23 +363,23 @@ def clean_subscripciones():
         inplace=True,
     )
     subscripciones.sort_values(by=Columns.ID.value, inplace=True)
-    subscripciones.to_csv(PathsClean.PATH_SUBSCRIPCIONES.value, index=False)
+    subscripciones.to_csv(encoding="utf8", path_or_buf=PathsClean.PATH_SUBSCRIPCIONES.value, index=False)
 
 
 def clean_visualizaciones():
-    df = pd.read_csv(Paths.PATH_VISUALIZACIONES.value, sep=SEPARADOR, encoding="utf-8")
+    df = pd.read_csv(Paths.PATH_VISUALIZACIONES.value, sep=SEPARADOR, encoding="utf8")
     get_historial_peliculas(df)
     get_historial_series(df)
 
 
 def clean_pagos():
-    df = pd.read_csv(Paths.PATH_PAGOS.value, sep=SEPARADOR, encoding="utf-8")
+    df = pd.read_csv(Paths.PATH_PAGOS.value, sep=SEPARADOR, encoding="utf8")
     get_pagos(df)
     get_arriendos_peliculas(df)
 
 
 def clean_genero_subgenero():
-    df = pd.read_csv(Paths.PATH_GENERO_SUBGENERO.value, sep=SEPARADOR, encoding="utf-8")
+    df = pd.read_csv(Paths.PATH_GENERO_SUBGENERO.value, sep=SEPARADOR, encoding="utf8")
     get_generos(df)
     get_subgeneros(df)
 
