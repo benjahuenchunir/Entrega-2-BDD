@@ -2,11 +2,11 @@
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $userInput = $_POST["userInput"];
-    $query = "SELECT series.titulo AS Serie FROM series
+    $query = "SELECT series.titulo AS Serie, COUNT(DISTINCT capitulos.numero_temporada) AS num_temporadas FROM series
     INNER JOIN capitulos ON series.id = capitulos.id_serie
     GROUP BY series.id, series.titulo
     HAVING COUNT(DISTINCT capitulos.numero_temporada) >= :userInput;";
-    $tableHeaders = array("Serie");
+    $tableHeaders = array("Serie", "num_temporadas");
 
     try {
         require_once "../config/dbh.inc.php";

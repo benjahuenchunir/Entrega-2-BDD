@@ -19,6 +19,13 @@
 \section{Dependencias funcionales y justificación}
 
 \section{Consultas}
+\begin{enumerate}
+    \item SELECT peliculas.titulo AS pelicula, proveedores.nombre AS proovedor FROM peliculas
+    INNER JOIN proveedores\_peliculas ON peliculas.id = proveedores\_peliculas.id\_pelicula
+    INNER JOIN proveedores ON proveedores\_peliculas.id\_proveedor = proveedores.id
+    WHERE proveedores\_peliculas.precio IS NULL;
+    \item
+\end{enumerate}
 
 \section{Supuestos}
 \begin{enumerate}

@@ -39,9 +39,9 @@
         </form>
     </div>
 
-    <br>
+    
 
-    <div id="result-div" class="container mt-5" style="height: 500px; overflow-y: scroll;"></div>
+    <div id="result-div" class="container mt-5"></div>
 
     <script>
         $(document).ready(function() {

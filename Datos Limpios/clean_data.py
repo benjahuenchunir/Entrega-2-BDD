@@ -137,6 +137,7 @@ def get_proovedores_peliculas(df: pd.DataFrame):
         columns={
             Columns.ID.value: Columns.ID_PROOVEDOR.value,
             Columns.PID.value: Columns.ID_PELICULA.value,
+            Columns.DISPONIBILIDAD.value: Columns.DIAS_ARRIENDO.value
         },
         inplace=True,
     )
