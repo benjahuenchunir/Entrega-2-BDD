@@ -23,6 +23,6 @@ if ($stmt->rowCount() > 0) {
 
     echo "</tbody></table>";
 } else {
-    echo "No se encontraro resultados";
+    echo "No se encontraron resultados";
 }
 echo "</div>";

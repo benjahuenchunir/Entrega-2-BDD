@@ -6,8 +6,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     INNER JOIN capitulos ON historial_series.id_capitulo = capitulos.id
     INNER JOIN series ON series.id = capitulos.id_serie
     INNER JOIN usuarios ON historial_series.id_usuario = usuarios.id
-    WHERE UPPER(usuarios.nombre) = UPPER(:userInput)
-    AND historial_series.fecha >= DATE_SUB(CURDATE(), INTERVAL 4 YEAR)
+    WHERE UPPER(usuarios.username) = UPPER(:userInput)
+    AND historial_series.fecha >= CURRENT_DATE - INTERVAL '4 year'
     GROUP BY series.id, series.titulo
     HAVING COUNT(*) > 1;";
     $tableHeaders = array("titulo", "cantidad_capitulos");

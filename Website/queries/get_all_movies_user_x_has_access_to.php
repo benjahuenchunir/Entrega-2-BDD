@@ -7,11 +7,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     INNER JOIN subscripciones ON proveedores_peliculas.id_proveedor = subscripciones.id_proveedor
     INNER JOIN usuarios ON subscripciones.id_usuario = usuarios.id
     LEFT JOIN arriendos_peliculas ON peliculas.id = arriendos_peliculas.id_pelicula AND arriendos_peliculas.id_usuario = usuarios.id
-    WHERE UPPER(usuarios.nombre) = UPPER(:userInput)
+    WHERE UPPER(usuarios.username) = UPPER(:userInput)
     AND (
         (precio IS NULL AND subscripciones.fecha_termino IS NULL)
         OR
-        (precio IS NOT NULL AND arriendos_peliculas.id IS NOT NULL AND DATE_ADD(arriendos_peliculas.fecha, INTERVAL arriendos_peliculas.dias_arriendo DAY) >= CURDATE())
+        (precio IS NOT NULL AND arriendos_peliculas.id IS NOT NULL AND (CURRENT_DATE <= arriendos_peliculas.fecha + arriendos_peliculas.dias_arriendo))
     );";
     $tableHeaders = array("pelicula");
 

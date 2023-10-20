@@ -2,13 +2,14 @@
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $userSelection = $_POST["userSelection"];
-    $query = "SELECT DISTINCT peliculas.titulo AS titulo FROM peliculas
+    $query = "SELECT DISTINCT peliculas.titulo AS titulo, generos.nombre AS genero FROM peliculas
     INNER JOIN generos_peliculas ON peliculas.id = generos_peliculas.id_pelicula
+    INNER JOIN generos ON generos_peliculas.id_genero = generos.id
     WHERE generos_peliculas.id_genero = :selectedGenre
     OR generos_peliculas.id_genero IN (
         SELECT id_subgenero FROM genero_subgeneros WHERE id_genero = :selectedGenre
     );";
-    $tableHeaders = array("titulo");
+    $tableHeaders = array("titulo", "genero");
 
     try {
         require_once "../config/dbh.inc.php";
