@@ -72,3 +72,4 @@ class Columns(Enum):
     ID_SUBGENERO = "id_subgenero"
     ID_X = "id_x"
     ID_Y = "id_y"
+    DIAS_ARRIENDO = "dias_arriendo"

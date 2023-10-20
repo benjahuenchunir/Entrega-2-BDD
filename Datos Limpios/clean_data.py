@@ -40,6 +40,7 @@ def get_series(df: pd.DataFrame):
     series.rename(columns={Columns.SID.value: Columns.ID.value}, inplace=True)
     series.drop_duplicates(subset=[Columns.ID.value], inplace=True)
     series.sort_values(by=Columns.ID.value, inplace=True)
+    series[Columns.ID.value] = series[Columns.ID.value].astype(int)
     series.to_csv(PathsClean.PATH_SERIES.value, index=False)
 
 
@@ -61,6 +62,9 @@ def get_capitulos(df: pd.DataFrame):
         },
         inplace=True,
     )
+    capitulos[Columns.ID.value] = capitulos[Columns.ID.value].astype(int)
+    capitulos[Columns.ID_SERIE.value] = capitulos[Columns.ID_SERIE.value].astype(int)
+    capitulos[Columns.NUMERO_TEMPORADA.value] = capitulos[Columns.NUMERO_TEMPORADA.value].astype(int)
     capitulos.drop_duplicates(subset=[Columns.ID.value], inplace=True)
     capitulos.sort_values(by=[Columns.ID_SERIE.value, Columns.ID.value], inplace=True)
     capitulos.to_csv(PathsClean.PATH_CAPITULOS.value, index=False)
@@ -84,9 +88,14 @@ def get_generos_series(df: pd.DataFrame):
     generos_series.rename(
         columns={Columns.ID.value: Columns.ID_GENERO.value}, inplace=True
     )
+    # Add comedia to Rick and morty
+    id_comedia = generos.loc[generos[Columns.GENERO.value] == "Comedia", Columns.ID.value].values[0]
+    generos_series.loc[generos_series[Columns.ID_GENERO.value].isna(), Columns.ID_GENERO.value] = id_comedia
     generos_series.sort_values(
         by=[Columns.ID_SERIE.value, Columns.ID_GENERO.value], inplace=True
     )
+    generos_series[Columns.ID_SERIE.value] = generos_series[Columns.ID_SERIE.value].astype(int)
+    generos_series[Columns.ID_GENERO.value] = generos_series[Columns.ID_GENERO.value].astype(int)
     generos_series.to_csv(PathsClean.PATH_GENEROS_SERIES.value, index=False)
 
 
@@ -111,6 +120,7 @@ def get_generos_peliculas(df: pd.DataFrame):
     generos_peliculas.sort_values(
         by=[Columns.ID_PELICULA.value, Columns.ID_GENERO.value], inplace=True
     )
+    generos_peliculas[Columns.ID_PELICULA.value] = generos_peliculas[Columns.ID_PELICULA.value].astype(int)
     generos_peliculas.to_csv(PathsClean.PATH_GENEROS_PELICULAS.value, index=False)
 
 
@@ -130,9 +140,15 @@ def get_proovedores_peliculas(df: pd.DataFrame):
         },
         inplace=True,
     )
-    proovedores_peliculas[Columns.ID_PELICULA.value] = proovedores_peliculas[Columns.ID_PELICULA.value].astype(int)
-    proovedores_peliculas[Columns.PRECIO.value] = proovedores_peliculas[Columns.PRECIO.value].astype('Int64')
-    proovedores_peliculas[Columns.DISPONIBILIDAD.value] = proovedores_peliculas[Columns.DISPONIBILIDAD.value].astype('Int64')
+    proovedores_peliculas[Columns.ID_PELICULA.value] = proovedores_peliculas[
+        Columns.ID_PELICULA.value
+    ].astype(int)
+    proovedores_peliculas[Columns.PRECIO.value] = proovedores_peliculas[
+        Columns.PRECIO.value
+    ].astype("Int64")
+    proovedores_peliculas[Columns.DISPONIBILIDAD.value] = proovedores_peliculas[
+        Columns.DISPONIBILIDAD.value
+    ].astype("Int64")
     proovedores_peliculas.sort_values(
         by=[Columns.ID_PROOVEDOR.value, Columns.ID_PELICULA.value], inplace=True
     )
@@ -155,6 +171,7 @@ def get_proovedores_series(df: pd.DataFrame):
     proovedores_series.sort_values(
         by=[Columns.ID_PROOVEDOR.value, Columns.ID_SERIE.value], inplace=True
     )
+    proovedores_series[Columns.ID_SERIE.value] = proovedores_series[Columns.ID_SERIE.value].astype(int)
     proovedores_series.to_csv(PathsClean.PATH_SERIES_PROVEEDORES.value, index=False)
 
 
@@ -175,6 +192,7 @@ def get_historial_peliculas(df: pd.DataFrame):
     historial_peliculas.reset_index(drop=True, inplace=True)
     historial_peliculas.index += 1
     historial_peliculas.index.name = Columns.ID.value
+    historial_peliculas[Columns.ID_PELICULA.value] = historial_peliculas[Columns.ID_PELICULA.value].astype(int)
     historial_peliculas.to_csv(PathsClean.PATH_HISTORIAL_PELICULAS.value, index=True)
 
 
@@ -195,6 +213,7 @@ def get_historial_series(df: pd.DataFrame):
     historial_series.reset_index(drop=True, inplace=True)
     historial_series.index += 1
     historial_series.index.name = Columns.ID.value
+    historial_series[Columns.ID_CAPITULO.value] = historial_series[Columns.ID_CAPITULO.value].astype(int)
     historial_series.to_csv(PathsClean.PATH_HISTORIAL_SERIES.value, index=True)
 
 
@@ -212,23 +231,19 @@ def get_pagos(df: pd.DataFrame):
     pagos.sort_values(
         by=[Columns.ID.value, Columns.ID_SUBSCRIPCION.value], inplace=True
     )
+    pagos[Columns.ID_SUBSCRIPCION.value] = pagos[Columns.ID_SUBSCRIPCION.value].astype(int)
     pagos.to_csv(PathsClean.PATH_PAGOS.value, index=False)
 
 
 def get_arriendos_peliculas(df: pd.DataFrame):
-    # TODO al igual que en pagos, el precio de arriendo se debe guardar ?
-    # Si el precio de la pelicula en suscripciones es constante entonces no
-    # En cambio si el precio de la pelicula en suscripciones es variable el monto que pago el usuario por arriendo es el de ese momento
-    # En caso de no entonces es necesario guardar al proovedor
-    # En caso de si entonces no es necesario guardar al proovedor
     pagos = df.dropna(subset=[Columns.PID.value])[
         [
             Columns.PAGO_ID.value,
             Columns.UID.value,
             Columns.PRO_ID.value,
             Columns.PID.value,
-            Columns.FECHA.value,
             Columns.MONTO.value,
+            Columns.FECHA.value,
         ]
     ]
     pagos.rename(
@@ -240,15 +255,31 @@ def get_arriendos_peliculas(df: pd.DataFrame):
         },
         inplace=True,
     )
+    proveedores_peliculas = pd.read_csv(
+        PathsClean.PATH_PELICULAS_PROVEEDORES.value, sep=SEPARADOR, encoding="utf-8"
+    )
+    pagos = pd.merge(
+        pagos,
+        proveedores_peliculas,
+        left_on=[Columns.ID_PELICULA.value, Columns.ID_PROOVEDOR.value],
+        right_on=[Columns.ID_PELICULA.value, Columns.ID_PROOVEDOR.value],
+        how="left",
+    )
     pagos.sort_values(
         by=[
             Columns.ID.value,
             Columns.ID_USUARIO.value,
-            Columns.ID_PROOVEDOR.value,
             Columns.ID_PELICULA.value,
         ],
         inplace=True,
     )
+    pagos.drop(columns=[Columns.PRECIO.value, Columns.ID_PROOVEDOR.value], inplace=True)
+    pagos.rename(
+        columns={Columns.DISPONIBILIDAD.value: Columns.DIAS_ARRIENDO.value},
+        inplace=True,
+    )
+    pagos[Columns.DIAS_ARRIENDO.value] = pagos[Columns.DIAS_ARRIENDO.value].astype(int)
+    pagos[Columns.ID_PELICULA.value] = pagos[Columns.ID_PELICULA.value].astype(int)
     pagos.to_csv(PathsClean.PATH_ARRIENDOS_PELICULAS.value, index=False)
 
 
@@ -318,7 +349,6 @@ def clean_subscripciones():
             Columns.ID.value,
             Columns.PRO_ID.value,
             Columns.UID.value,
-            Columns.ESTADO.value,
             Columns.FECHA_INICIO.value,
             Columns.FECHA_TERMINO.value,
             Columns.COSTO.value,
