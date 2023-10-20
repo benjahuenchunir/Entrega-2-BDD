@@ -4,7 +4,7 @@ echo "Cantidad de resultados: $rowCount<br>";
  
 if ($stmt->rowCount() > 0) {
             echo "<table class='table' id='result-table'>
-                <thead>
+                <thead class='thead-light sticky-top'>
                     <tr>";
             foreach ($tableHeaders as $header) {
                 echo "<th>".ucfirst($header)." <button class='btn btn-secondary btn-sm' id=$header onclick='onSortButtonClicked(this.id)'>▲</button></th>";

@@ -41,11 +41,10 @@
 
     <br>
 
-    <div id="result-div" class="container mt-5"></div>
+    <div id="result-div" class="container mt-5" style="height: 500px; overflow-y: scroll;"></div>
 
     <script>
         $(document).ready(function() {
-            console.log('Document ready.');
             // Populate Genders Dropdown
             $.ajax({
                 url: 'utils/get_genders.php',
@@ -118,9 +117,6 @@
                     },
                     error: function(xhr, status, error) {
                         console.error('Error running query:', error);
-                        console.log(xhr.responseText);
-                        console.log(xhr.status);
-                        console.log(xhr.statusText);
                     },
                 });
             });
