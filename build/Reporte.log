@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.24)  20 OCT 2023 18:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.24)  20 OCT 2023 18:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -471,17 +471,17 @@ Package rerunfilecheck Info: File `Reporte.out' has not changed.
 (rerunfilecheck)             Checksum: A4F0DE0AADC259C10B4E84A9A249919A;673.
  ) 
 Here is how much of TeX's memory you used:
- 11223 strings out of 475502
- 179832 string characters out of 5761813
+ 11217 strings out of 475502
+ 179749 string characters out of 5761813
  1927248 words of memory out of 5000000
- 32316 multiletter control sequences out of 15000+600000
+ 32310 multiletter control sequences out of 15000+600000
  562017 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,7n,79p,424b,562s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "d:\Users\benja\Documents\Universidad\2023\Bases de datos\Entrega-2-BDD\build\Reporte.pdf" (8 pages, 229453 bytes).
+ 75i,7n,79p,424b,555s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/benja/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "d:\Users\benja\Documents\Universidad\2023\Bases de datos\Entrega-2-BDD\build\Reporte.pdf" (8 pages, 220391 bytes).
 PDF statistics:
- 174 PDF objects out of 1000 (max. 8388607)
+ 169 PDF objects out of 1000 (max. 8388607)
  44 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -131,11 +131,11 @@
 \section{Supuestos}
 \begin{enumerate}
     \item Para la consulta 6, "Dado un username ingresado por el usuario, muestre todas las series para las cuales el usuario ha visto más de un capítulo durante el último año", el ver dos veces el mismo capítulo también cuenta (issue \href{https://github.com/IIC2413/Syllabus-2023-2/issues/172}{\#72}).
-    \item Para las consultas que piden "en el ultimo año" se consideró un intervalo de tiempo mayor (4 años), ya que no hay datos del último año (issue \href{https://github.com/IIC2413/Syllabus-2023-2/issues/175}{\#175})
+    \item Para las consulta 6 se consideró un intervalo de tiempo mayor (4 años), ya que no hay datos del último año (issue \href{https://github.com/IIC2413/Syllabus-2023-2/issues/175}{\#175})
     \item Clasificación, puntuación y año son de la serie y no varían según capítulo (issue \href{https://github.com/IIC2413/Syllabus-2023-2/issues/171}{\#171})
-    \item La serie "Rick  y Morty" no tiene género en los datos entregados, se le asignó "Comedia" (issue \href{https://github.com/IIC2413/Syllabus-2023-2/issues/189}{\#189})
-    \item Se eliminó el atributo "estado" de la tabla de subscripciones, ya que solo representa si la subscripción esta activa o no, y eso se puede inferir de la fecha de termino (si existe o es nula). Así se evita una dependencia transitiva.
-    \item Al igual que el costo de subscripción y el costo de arriendo de una película, los días de arriendo de la película (el atributo "disponibilidad") también pueden variar en el tiempo, requiriendo ser guardados para cada arriendo.
+    \item La serie Rick  y Morty no tiene género en los datos entregados, se le asignó Comedia (issue \href{https://github.com/IIC2413/Syllabus-2023-2/issues/189}{\#189})
+    \item Se eliminó el atributo estado de la tabla de subscripciones, ya que solo representa si la subscripción esta activa o no, y eso se puede inferir de la fecha de termino (si existe o es nula). Así se evita una dependencia transitiva.
+    \item Al igual que el costo de subscripción y el costo de arriendo de una película, los días de arriendo de la película (el atributo disponibilidad) también pueden variar en el tiempo, requiriendo ser guardados para cada arriendo.
     \item Una serie que tiene capítulos pertenecientes a n temporadas distintas tiene n temporadas, sin importar el número de temporada de estas (issue \href{https://github.com/IIC2413/Syllabus-2023-2/issues/200}{\#200})
 \end{enumerate}
 
