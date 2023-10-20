@@ -3,7 +3,7 @@ $rowCount = $stmt->rowCount();
 echo "Cantidad de resultados: $rowCount<br>";
 
 if ($stmt->rowCount() > 0) {
-    echo "<div style='height: 500px; overflow-y: scroll;'>";
+    echo "<div style='max-height: 500px; overflow-y: scroll;'>";
     echo "<table class='table table-bordered table-hover' id='result-table'>
                 <thead class='thead-light sticky-top' style='position: sticky; top: -1px; background-color: #fff;'>
                     <tr>";
