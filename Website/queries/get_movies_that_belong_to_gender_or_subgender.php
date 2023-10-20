@@ -2,7 +2,7 @@
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $userSelection = $_POST["userSelection"];
-    $query = "SELECT DISTINCT titulo AS titulo FROM peliculas
+    $query = "SELECT DISTINCT peliculas.titulo AS titulo FROM peliculas
     INNER JOIN generos_peliculas ON peliculas.id = generos_peliculas.id_pelicula
     WHERE generos_peliculas.id_genero = :selectedGenre
     OR generos_peliculas.id_genero IN (

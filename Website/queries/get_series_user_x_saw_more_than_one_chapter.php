@@ -2,7 +2,7 @@
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $userInput = $_POST["userInput"];
-    $query = "SELECT series.titulo AS Titulo, COUNT(*) AS num_capitulos FROM historial_series
+    $query = "SELECT series.titulo AS titulo, COUNT(*) AS cantidad_capitulos FROM historial_series
     INNER JOIN capitulos ON historial_series.id_capitulo = capitulos.id
     INNER JOIN series ON series.id = capitulos.id_serie
     INNER JOIN usuarios ON historial_series.id_usuario = usuarios.id
@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     AND historial_series.fecha >= DATE_SUB(CURDATE(), INTERVAL 4 YEAR)
     GROUP BY series.id, series.titulo
     HAVING COUNT(*) > 1;";
-    $tableHeaders = array("Titulo", "num_capitulos");
+    $tableHeaders = array("titulo", "cantidad_capitulos");
 
     try {
         require_once "../config/dbh.inc.php";

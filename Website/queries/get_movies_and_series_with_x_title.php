@@ -7,11 +7,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         INNER JOIN proveedores_peliculas ON peliculas.id = proveedores_peliculas.id_pelicula
         INNER JOIN proveedores ON proveedores_peliculas.id_proveedor = proveedores.id
         UNION
-        SELECT series.titulo AS Titulo, proveedores.nombre AS Proveedor FROM series
+        SELECT series.titulo AS titulo, proveedores.nombre AS proveedor FROM series
         INNER JOIN proveedores_series ON series.id = proveedores_series.id_serie
         INNER JOIN proveedores ON proveedores_series.id_proveedor = proveedores.id
-    ) AS U WHERE UPPER(Titulo) = UPPER(:userInput);";
-    $tableHeaders = array("titulo", "proovedor");
+    ) AS U WHERE UPPER(titulo) = UPPER(:userInput);";
+    $tableHeaders = array("titulo", "proveedor");
 
     try {
         require_once "../config/dbh.inc.php";
